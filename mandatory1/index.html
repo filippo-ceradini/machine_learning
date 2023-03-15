@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Booking Predictor</title>
+    <!-- Load Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Hotel Booking Predictor</h2>
+        <form method="post">
+            <div class="form-group">
+                <label for="input_lead_time">Lead Time:</label>
+                <input type="number" class="form-control" id="input_lead_time" name="lead_time" placeholder="0" required>
+            </div>
+            <div class="form-group">
+                <label for="input_arrival_year">Arrival Year:</label>
+                <input type="number" class="form-control" id="input_arrival_year" name="arrival_date_year" placeholder="2010" required>
+            </div>
+            <div class="form-group">
+                <label for="input_arrival_week">Arrival Week:</label>
+                <input type="number" class="form-control" id="input_arrival_week" name="arrival_date_week_number" placeholder="1" required>
+            </div>
+            <div class="form-group">
+                <label for="input_arrival_day">Arrival Day:</label>
+                <input type="number" class="form-control" id="input_arrival_day" name="arrival_date_day_of_month" placeholder="1" required>
+            </div>
+            <div class="form-group">
+                <label for="input_weekend_nights">Weekend Nights:</label>
+                <input type="number" class="form-control" id="input_weekend_nights" name="stays_in_weekend_nights" placeholder="0" required>
+            </div>
+            <div class="form-group">
+                <label for="input_week_nights">Week Nights:</label>
+                <input type="number" class="form-control" id="input_week_nights" name="stays_in_week_nights" placeholder="0" required>
+            </div>
+            <div class="form-group">
+                <label for="input_adults">Adults:</label>
+                <input type="number" class="form-control" id="input_adults" name="adults" placeholder="0" required>
+            </div>
+            <div class="form-group">
+                <label for="input_children">Children:</label>
+                <input type="number" class="form-control" id="input_children" name="children" placeholder="0" required>
+            </div>
+            <div class="form-group">
+                <label for="input_babies">Babies:</label>
+                <input type="number" class="form-control" id="input_babies" name="babies" placeholder="0" required>
+            </div>
+            <div class="form-group">
+                <label for="input_arrival_month">Arrival Month:</label>
+                <select class="form-control" id="input_arrival_month" name="arrival_date_month">
+                    <option value="1,0,0,0,0,0,0,0,0,0,0,0">January</option>
+                    <option value="0,1,0,0,0,0,0,0,0,0,0,0">February</option>
+                    <option value="0,0,1,0,0,0,0,0,0,0,0,0">March</option>
+                    <option value="0,0,0,1,0,0,0,0,0,0,0,0">April</option>
+                    <option value="0,0,0,0,1,0,0,0,0,0,0,0">May</option>
+                    <option value="0,0,0,0,0,1,0,0,0,0,0,0">June</option>
+                    <option value="0,0,0,0,0,0,1,0,0,0,0,0">July</option>
+                    <option value="0,0,0,0,0,0,0,1,0,0,0,0">August</option>
+                    <option value="0,0,0,0,0,0,0,0,1,0,0,0">September</option>
+                    <option value="0,0,0,0,0,0,0,0,0,1,0,0">October</option>
+                    <option value="0,0,0,0,0,0,0,0,0,0,1,0">November</option>
+                    <option value="0,0,0,0,0,0,0,0,0,0,0,1">December</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="meal">Meal:</label>
+                <select class="form-control" id="meal" name="meal">
+                    <option value="1,0,0,0">Bed & Breakfast</option>
+                    <option value="0,1,0,0">Full board</option>
+                    <option value="0,0,1,0">Half board</option>
+                    <option value="0,0,0,1">Self catering</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="input_arrival_country">Arrival Country:</label>
+                <select class="form-control" id="input_arrival_country" name="arrival_country">
+                    <option value="1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">AUS</option>
+                    <option value="0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">AUT</option>
+                    <option value="0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">BEL</option>
+                    <option value="0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0">BGR</option>
+                    <option value="0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0">CHE</option>
+                    <option value="0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0">CHN</option>
+                    <option value="0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0">CZE</option>
+                    <option value="0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0">DEU</option>
+                    <option value="0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0">ESP</option>
+                    <option value="0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0">FRA</option>
+                    <option value="0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0">GBR</option>
+                    <option value="0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0">IRL</option>
+                    <option value="0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0">ITA</option>
+                    <option value="0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0">MEX</option>
+                    <option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0">NLD</option>
+                    <option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0">PRT</option>
+                    <option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0">ROU</option>
+                    <option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1">USA</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <h3 class="mt-4">The result is: <span>{{ result }}</span></h3>
+    </div>
+</body>
